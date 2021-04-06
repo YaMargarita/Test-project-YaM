@@ -1,28 +1,56 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header @showMovingMenu="showElem"
+            @showModal="showElem"></Header>
+    <div class="main-container">
+      <Slider @showModal="showElem"></Slider>
+      <Calculate @showModal="showElem"></Calculate>
+    </div>
+    <Moving_menu v-if="showMenu" @closeMenu="hideElem" @showModal="showElem"></Moving_menu>
+    <Modal_window v-if="showModal" @closeModal="hideElem"></Modal_window>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from "./components/Header";
+import Slider from "./components/Slider"
+import Calculate from "./components/Calculate"
+import Moving_menu from "./components/app/Moving-menu"
+import Modal_window from "./components/app/Modal-window"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header, Slider, Calculate, Moving_menu, Modal_window
+  },
+  data(){
+    return{
+      showMenu: false,
+      showModal: false,
+    }
+  },
+  methods: {
+    showElem(type){
+      if(type === 'moving-menu'){
+        this.showMenu = true;
+      } else{
+        this.showModal = true;
+      }
+      document.body.style.overflowY = 'hidden'
+    },
+    hideElem(type){
+      if(type === 'moving-menu'){
+        this.showMenu = false;
+      } else{
+        this.showModal = false;
+      }
+      document.body.style.overflowY = 'auto'
+    },
+
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+@import "assets/styles/main.css";
+@import "assets/styles/media.css";
 </style>

@@ -1,0 +1,129 @@
+.calculate {
+  margin-top: 100px;
+  margin-bottom: 130px;
+  font-family: "Nekst-Black", "sans-serif";
+  color: #575757;
+}
+
+.calculate-title {
+  width: 753px;
+  margin-bottom: 30px;
+  font-size: 54px;
+  line-height: 90%;
+  color: #111111;
+}
+
+.calculate-input-wrapper {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.calculate-item {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculate-item-label {
+  font-family: "Gilroy-Regular", "sans-serif";
+  font-size: 16px;
+  line-height: 20px;
+  color: #575757;
+}
+
+.calculate-item-input {
+  margin-top: 25px;
+  padding: 16px 24px;
+  font-family: "Nekst-Black", "sans-serif";
+  height: 68px;
+  background: #F3F3F4;
+  border-radius: 16px;
+  font-size: 30px;
+  line-height: 36px;
+  border: none;
+  color: #575757;
+}
+
+.calculate-item-range {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  -webkit-appearance: none;
+  width: 85%;
+  height: 3px;
+  background: #d7d7d7;
+  outline: none;
+}
+
+.calculate-item-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #FF9514;
+  cursor: pointer;
+}
+
+.calculate-item-range::-moz-range-progress {
+  background-color: #FF9514;
+}
+
+.calculate-item-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #FF9514;
+  cursor: pointer;
+  border: none;
+}
+
+.calculate-item-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  font-size: 30px;
+  line-height: 36px;
+  color: #575757;
+}
+
+.calculate-percent-icon {
+  bottom: 10px;
+  padding: 10px;
+  background-color: #EBEBEC;
+  border-radius: 16px;
+  font-size: 26px;
+  line-height: 120%;
+}
+
+.calculate-result-wrapper {
+  margin-top: 45px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+}
+
+.calculate-result-item {
+  width: 100%;
+}
+
+.calculate-result {
+  margin-top: 8px;
+  width: 100%;
+  font-size: 54px;
+  line-height: 90%;
+  color: #575757;
+}
+
+.calculate-btn {
+  background: #FF9514;
+  color: #fff;
+  font-size: 30px;
+  line-height: 36px;
+  border-radius: 48px;
+  height: 70px;
+}
+
+/*# sourceMappingURL=calculate.css.map */
